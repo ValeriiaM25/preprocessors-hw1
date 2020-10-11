@@ -1,0 +1,73 @@
+@mixin flex-container($value) {
+    display: flex;
+    align-items: center;
+    justify-content: $value; 
+}
+
+@mixin button-styles {
+    box-sizing: border-box;
+    height: 54px;
+    width: 200px;
+    font-size: 20px;
+    font-family: $text-font;
+    border: none;
+    color:#fff;
+    line-height: 1.35;
+    outline: none;
+
+    &:hover {
+        background-color: rgb(230, 179, 87);
+    }
+
+    &:active {
+        background-color:  rgb(223, 164, 55);
+        transform: translateY(3px);
+        transition: .3s;
+    }
+}
+
+
+@mixin title-styles($color){
+    font-size: $title-font-size;
+    font-family: $text-font;
+    font-weight: 600;
+    color: $color;
+}
+
+@mixin text-styles ($color){
+    font-size: $text-font-size;
+    font-family: $text-font;
+    color: $color;
+}
+
+@mixin blog-text-styles {
+    margin-left: 20px;
+    width: 300px;
+    font-size: $text-font-size;
+    text-align: justify;
+    color: white;
+    font-family: 'MyriadPro', sans-serif;
+}
+
+@mixin icon-styles {
+    font-size: 40px;
+    margin-left: 20px;
+}
+
+@mixin form-styles {
+    width: 500px;
+    padding-left: 20px;
+    background-color: rgba(0, 196, 196, 0.502);
+    border: none;
+    color: white;
+    font-size: 15px;
+    font-weight: 300;
+}
+
+@mixin form-focus-styles {
+    outline: none;
+    color: white;
+    background-color: rgba(0, 196, 196, 1);
+    border-left: 3px solid #355b82;
+    transition: border-left .3s;
+}
